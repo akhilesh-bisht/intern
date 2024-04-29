@@ -1,0 +1,40 @@
+.glareBackground {
+    $padding: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    z-index: -1;
+
+    .background {
+        position: relative;
+        width: 100vw;
+        height: 90vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        span {
+            position: absolute;
+            width: 30vw;
+            height: 30vw;
+            border-radius: 999px;
+            filter: blur(200px) brightness(50%);
+
+            &.primary {
+                top: $padding;
+                left: $padding;
+                background: #a35cff;
+            }
+            &.secondary {
+                background: #860e40;
+            }
+            &.tertiary {
+                bottom: $padding;
+                right: $padding;
+                background: #2bb3bd;
+            }
+        }
+    }
+}
